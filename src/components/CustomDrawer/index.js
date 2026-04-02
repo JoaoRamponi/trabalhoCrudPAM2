@@ -39,7 +39,7 @@ const CustomDrawer = () => {
         <View style={{ flex: 1, backgroundColor: '#fff' }}>
 
             {/* //IMAGEM DO MENU LATERAL */}
-            <Image style={styles.logo} source={require('../../../assets/logo2.png')} />
+            <Image style={styles.logo} source={require('../../../assets/LogoTrabCrud.jpg')} />
 
             <View style={{ width: '90%', backgroundColor: '#c1c1c1', height: 0.5, alignSelf: 'center', marginBottom: 5, marginTop: 20 }}></View>
 

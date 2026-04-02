@@ -59,7 +59,7 @@ function excluirItem(id) {
 async function deletar(id) {
     try {
 
-        await api.get(`MOBILEAMS/appBD/excluir.php?id=${id}`);
+        await api.get(`excluir.php?id=${id}`);
 
         listarDados();
         totalDadosCadastrados();
@@ -72,14 +72,14 @@ async function deletar(id) {
     async function totalDadosCadastrados() {
 
         //MUDAR CAMINHO BD
-        const res = await api.get(`MOBILEAMS/appBD/listar-cards.php`);
+        const res = await api.get(`listar-cards.php`);
         setTotal(res.data);
     }
 
      async function listarDados() {
      try {
             //MUDAR CAMINHO BD
-            const res = await api.get(`MOBILEAMS/appBD/buscar.php`);
+           const res = await api.get("buscar.php");
             setDados(res.data.result);
          
 
@@ -110,8 +110,8 @@ async function deletar(id) {
     if (search !== '') {
         lista = lista.filter(item =>
             //COLOCAR AQUI OS NOMES DOS STATES QUE SERÃO BUSCADOS NA TABELA 
-            item.cidade.toLowerCase().includes(search.toLowerCase()) ||
-            item.estado.toLowerCase().includes(search.toLowerCase())
+            item.nome.toLowerCase().includes(search.toLowerCase()) ||
+            item.curso.toLowerCase().includes(search.toLowerCase())
         );
     }
 
@@ -119,15 +119,15 @@ async function deletar(id) {
 }, [search, dados]);
 
 //FUNÇÃO PARA ORDENAR OS DADOS TABELA QUE MOSTRA OS DADOS DO BD
-function ordenarPorCidade() {
+function ordenarPorNome() {
     let lista = [...filteredDados];
 
     lista.sort((a, b) => {
         if (sortAsc) {
             //COLOQUE AQUU O STATE QUE SERÁ ORDENADO NA TABELA
-            return a.cidade.localeCompare(b.cidade);
+            return a.nome.localeCompare(b.nome);
         } else {
-            return b.cidade.localeCompare(a.cidade);
+            return b.nome.localeCompare(a.nome);
         }
     });
 
@@ -149,7 +149,7 @@ function ordenarPorCidade() {
                             <MaterialIcons name="menu" size={35} color="black" />
                         </TouchableOpacity>
                          {/* NOME DA IMAGEM DA TELA HOME */}
-                        <Image style={styles.logo} source={require('../../../assets/logo2.png')} />
+                        <Image style={styles.logo} source={require('../../../assets/LogoTrabCrud.jpg')} />
 
                     </View>
                 </View>
@@ -234,12 +234,13 @@ function ordenarPorCidade() {
   <View style={styles.tableHeader}>
     <Text style={styles.headerCell}>ID</Text>
 
-    <TouchableOpacity onPress={ordenarPorCidade}>
-        <Text style={styles.headerCell}>Cidade ▲▼</Text>
+    <TouchableOpacity onPress={ordenarPorNome}>
+        <Text style={styles.headerCell}>Nome ▲▼</Text>
     </TouchableOpacity>
 
-    <Text style={styles.headerCell}>Estado</Text>
-    <Text style={styles.headerCell}>Ações</Text>
+    <Text style={styles.headerCell}>Idade</Text>
+    <Text style={styles.headerCell}>CPF</Text>
+    <Text style={styles.headerCell}>Curso</Text>
 </View>
 
     {/* Linhas */}
@@ -253,6 +254,7 @@ function ordenarPorCidade() {
     >
 
         {/* COLOQUE OS STATES QUE SERÃO MOSTRADOS NA TABELA AO LISTAR DO BD */}
+        <Text style={styles.cell}>{item.id}</Text>
         <Text style={styles.cell}>{item.nome}</Text>
         <Text style={styles.cell}>{item.idade}</Text>
         <Text style={styles.cell}>{item.cpf}</Text>

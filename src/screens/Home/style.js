@@ -3,35 +3,31 @@ import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
 
 export const styles = StyleSheet.create({
+
     container:{
         flex: 1,
+        backgroundColor: '#ffffff',
     },
 
     header:{
-        
-        backgroundColor: '#fafafa',
-        shadowColor: 'rgba(0, 0, 0, 0.1)',
-        shadowOpacity: 0.1,
-        elevation: 6,
-        shadowRadius: 15,
-        shadowOffset : { width: 1, height: 5},
-        borderBottomRightRadius: 5,
-        borderBottomLeftRadius: 5,
-        height: 55,
+        backgroundColor: '#9b59b6',
+        height: 70,
+        justifyContent: 'center',
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+        elevation: 8,
     },
 
     menu:{
         position: 'absolute',
         left: 20,
-        alignSelf: "center",
-        top: 10,
+        top: 25,
     },
 
     logo:{
-        width: 160,
-        height: 40,
+        width: 140,
+        height: 35,
         alignSelf: "center",
-        marginTop: 10,
     },
 
     containerHeader:{
@@ -42,34 +38,34 @@ export const styles = StyleSheet.create({
 
     titleTasks:{
         flexDirection: 'row',
-        marginBottom: 5,
-        marginTop: 50,
+        marginTop: 40,
+        marginLeft: 20,
     },
 
     greeting:{
         fontSize: 18,
-        color: colors.heading,
+        color: '#000000',
         fontFamily: fonts.text,
-        alignSelf: "center",
     },
 
     userName:{
         fontSize: 22,
-        color: colors.heading,
-        lineHeight: 40,
+        color: '#000000',
         fontFamily: fonts.text,
+        fontWeight: 'bold',
     },
 
     image:{
-        width: 70,
-        height: 70,
+        width: 60,
+        height: 60,
         borderRadius: 30
     },
 
     lenghtText:{
-        color: colors.green, 
-        fontSize: 35, 
+        color: '#9b59b6', 
+        fontSize: 32, 
         fontFamily: fonts.text,
+        fontWeight: 'bold'
     },
 
     tasks:{
@@ -78,91 +74,89 @@ export const styles = StyleSheet.create({
     },
 
     taskBackground:{
-        backgroundColor: '#333333'
+        backgroundColor: '#ffffff'
     },
 
     tasksText:{
         marginTop: 10,
-        fontSize: 20,
+        fontSize: 18,
         marginBottom: 10,
-        color: '#000'
+        color: '#000000'
     },
 
     logout:{
         position: 'absolute',
-        right: 0,
-        color: colors.red,
-        alignSelf: "center"
+        right: 20,
+        top: 25,
+        color: '#ffffff',
     },
 
     containerBox:{
-        width: '85%',
+        width: '90%',
         alignSelf: "center",
-        marginBottom: 25,
+        marginBottom: 20,
     },
 
     box:{
-        backgroundColor: 'white',
-        justifyContent: 'space-between',
+        backgroundColor: '#ffffff',
         flexDirection: 'row',
-        padding: 15,
-        marginTop: 30,
-        borderTopLeftRadius: 15,
-        borderTopRightRadius: 15,
-        shadowColor: 'rgba(0, 0, 0, 0.1)',
-        shadowOpacity: 0.1,
+        justifyContent: 'space-between',
+        padding: 20,
+        marginTop: 20,
+        borderRadius: 15,
         elevation: 5,
-        shadowRadius: 15,
-        shadowOffset : { width: 1, height: 1},
-        
+        borderWidth: 1,
+        borderColor: '#e0e0e0',
     },
 
     rText:{
-        fontSize: 20,
-        color: 'gray',
+        fontSize: 16,
+        color: '#000000',
         fontFamily: fonts.text,
     },
 
     textFooter:{
-        borderTopColor: '#ccc',
-        paddingTop: 15, 
-        paddingBottom: 10, 
-        borderTopWidth: 1,
-        color: '#FFF',
-        backgroundColor: '#871003',
+        padding: 12, 
+        color: '#ffffff',
+        backgroundColor: '#9b59b6',
         textAlign: 'center',
-        fontSize: 15,
+        fontSize: 14,
         borderBottomLeftRadius: 15,
         borderBottomRightRadius: 15,
         fontFamily: fonts.text,
     },
 
     iconRegistered:{
-        justifyContent: 'center',
         alignSelf: 'center',
     },
 
     textos:{
-        justifyContent: 'flex-end',
         alignItems: 'flex-end',
     },
 
     circleProgressView:{
         flexDirection: 'row',
         alignSelf: "center",
-        marginTop: 20,
+        marginTop: 25,
+        backgroundColor: '#ffffff',
+        padding: 15,
+        borderRadius: 15,
+        elevation: 4,
+        borderWidth: 1,
+        borderColor: '#e0e0e0',
     },
 
     textProgress:{
         fontFamily: fonts.text,
-        fontSize: 16,
-        color: 'gray',
+        fontSize: 14,
+        color: '#000000',
     },
 
     textProgressTitle:{
         fontFamily: fonts.text,
-        fontSize: 20,
-        color: '#000',
+        fontSize: 18,
+        color: '#000000',
+        fontWeight: 'bold'
     },
 
     textProgressContainer:{
@@ -172,99 +166,57 @@ export const styles = StyleSheet.create({
 
     numberInside:{
         fontFamily: fonts.text,
-        fontSize: 18,
-        color: '#000',
-        textDecorationLine: 'underline',
-
+        fontSize: 16,
+        color: '#9b59b6',
+        fontWeight: 'bold'
     },
 
     boxContainer:{
-        marginRight: 20,
+        marginRight: 15,
         width: 200,
         marginLeft: 10,
     },
-    grid:{
-        marginTop: 8,
-        
-      },
-    
-      griditem:{
-        padding: 11,
-        borderBottomColor: "#dbdbdb",
-        borderBottomWidth: StyleSheet.hairlineWidth
-      },
-    
-       gridbotaoEditar:{
-         position: 'absolute',
-         right:40,
-         color:'#5c7ef6',
-       },
-    
-       gridbotaoExcluir:{
-         position: 'absolute',
-         right:15,
-         color:'#cc1414',
-       },
 
-  tableHeader: {
-  flexDirection: 'row',
-  backgroundColor: '#2f95dc',
-  borderTopWidth: 1,
-  borderLeftWidth: 1,
-  borderColor: '#ccc'
-},
+    tableHeader: {
+        flexDirection: 'row',
+        backgroundColor: '#9b59b6',
+        borderRadius: 10,
+        overflow: 'hidden'
+    },
 
-headerCell: {
-  width: 100,
-  padding: 10,
-  fontWeight: 'bold',
-  color: '#fff',
-  textAlign: 'center',
-  borderRightWidth: 1,
-  borderBottomWidth: 1,
-  borderColor: '#ccc'
-},
+    headerCell: {
+        width: 100,
+        padding: 12,
+        fontWeight: 'bold',
+        color: '#ffffff',
+        textAlign: 'center',
+    },
 
-griditem: {
-  flexDirection: 'row',
-  borderLeftWidth: 1,
-  borderColor: '#ccc'
-},
+    griditem: {
+        flexDirection: 'row',
+    },
 
-cell: {
-  width: 100,
-  padding: 10,
-  textAlign: 'center',
-  borderRightWidth: 1,
-  borderBottomWidth: 1,
-  borderColor: '#ccc',
-  color: '#333'
-},
+    cell: {
+        width: 100,
+        padding: 12,
+        textAlign: 'center',
+        color: '#000000',
+        backgroundColor: '#ffffff',
+    },
 
-cellIcon: {
-  width: 100,
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderRightWidth: 1,
-  borderBottomWidth: 1,
-  borderColor: '#ccc'
-},
+    rowEven: {
+        backgroundColor: '#f9f9f9'
+    },
 
-rowEven: {
-  backgroundColor: '#f2f2f2'
-},
+    rowOdd: {
+        backgroundColor: '#ffffff'
+    },
 
-rowOdd: {
-  backgroundColor: '#ffffff'
-},
+    actions: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        width: 100,
+        padding: 10
+    }
 
-actions: {
-  flexDirection: 'row',
-  justifyContent: 'space-around',
-  width: 100,
-  borderRightWidth: 1,
-  borderBottomWidth: 1,
-  borderColor: '#ccc',
-  padding: 10
-}
-})
+});

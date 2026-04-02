@@ -1,175 +1,210 @@
 import { StyleSheet } from "react-native";
 
-
 export const styles = StyleSheet.create({
-    TextInput:{
-        borderWidth: 0.5,
-        borderColor: '#000',
-        width: '90%',
-        borderRadius: 5,
-        padding: 10,
-        marginBottom: 5,
-        justifyContent: "center",
-        marginHorizontal: 5,
+    TextInput: {
+        backgroundColor: '#ffffff',
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: '#e0e0e0',
+        width: '85%',
+        padding: 14,
+        marginBottom: 12,
+        fontSize: 16,
+        color: '#000000',
         alignSelf: "center",
-        backgroundColor: '#009ddd',
-        height: 45,
+        height: 50,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 2,
+        elevation: 1,
     },
 
-    TextInputArea:{
-        borderWidth: 0.5,
-        borderColor: '#000',
-        width: '90%',
-        borderRadius: 5,
-        padding: 10,
-        marginBottom: 5,
-        justifyContent: "center",
-        marginHorizontal: 5,
+    TextInputArea: {
+        backgroundColor: '#ffffff',
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: '#e0e0e0',
+        width: '85%',
+        padding: 14,
+        marginBottom: 12,
+        textAlignVertical: 'top',
         alignSelf: "center",
-        backgroundColor: '#fff',
-        height: 90,
+        height: 100,
+        fontSize: 16,
+        color: '#000000',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 2,
     },
 
-    Picker:{
-        borderWidth: 0.5,
-        borderColor: '#000',
-        width: '90%',
-        borderRadius: 5,
-        padding: 5,
-        marginBottom: 5,
-        justifyContent: "center",
-        marginHorizontal: 5,
-        alignSelf: "center",
-        backgroundColor: '#fff',
-        height: 45,
-    },
-
-    PickerRow:{
-        borderWidth: 0.5,
-        borderColor: '#000',
-        width: 140,
-        borderRadius: 5,
-        padding: 5,
-        marginBottom: 5,
-        justifyContent: "center",
-        marginHorizontal: 5,
-        alignSelf: "center",
-        backgroundColor: '#fff',
-        height: 45,
-    },
-
-    Button:{
-        backgroundColor: '#386dbd',
-        width: '60%',
+    Picker: {
+        backgroundColor: '#ffffff',
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: '#e0e0e0',
+        width: '85%',
+        paddingHorizontal: 14,
+        marginBottom: 12,
         alignSelf: "center",
         height: 50,
         justifyContent: "center",
-        alignItems: "center",
+        color: '#000000',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 2,
+    },
+
+    PickerRow: {
+        backgroundColor: '#ffffff',
         borderRadius: 10,
-        marginTop: 20,
-        marginBottom: 20,
-        height: 60
+        borderWidth: 1,
+        borderColor: '#e0e0e0',
+        width: 150,
+        paddingHorizontal: 12,
+        marginBottom: 8,
+        alignSelf: "center",
+        height: 48,
+        justifyContent: "center",
+        marginHorizontal: 6,
+        color: '#000000',
     },
 
-    ButtonText:{
-        fontSize: 20,
-        color: '#fff',
-      
+    Button: {
+        backgroundColor: '#9b59b6',
+        borderRadius: 25,
+        width: '70%',
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 24,
+        marginBottom: 24,
+        height: 55,
+        shadowColor: '#9b59b6',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
+        elevation: 5,
     },
 
-    TitleInputs:{
- 
+    ButtonText: {
         fontSize: 18,
-        color: "#ffffff",
-        marginLeft: 35,
-        marginTop: 15,
-        marginBottom: 10,
+        color: '#ffffff',
+        fontWeight: '600',
+        letterSpacing: 0.5,
+    },
+
+    TitleInputs: {
+        fontSize: 16,
+        color: "#000000",
+        marginLeft: 28,
+        marginTop: 12,
+        marginBottom: 6,
+        fontWeight: '600',
     },
     
-    TitleInputsRow:{
-    
-        fontSize: 18,
-        color: "#000",
-        marginLeft: 13,
-        marginTop: 15,
+    TitleInputsRow: {
+        fontSize: 15,
+        color: "#000000",
+        marginLeft: 12,
+        marginTop: 12,
+        fontWeight: '500',
+        marginBottom: 4,
     },
 
-    BackButton:{
-     
+    BackButton: {
         position: 'absolute',
-        left: 0,
+        left: 16,
         alignItems: "center",
         justifyContent: "center",
-        top: -3,
+        top: 12,
+        backgroundColor: 'rgba(0,0,0,0.05)',
+        borderRadius: 30,
+        width: 40,
+        height: 40,
+        zIndex: 10,
     },
 
-    BackButtonText:{
-     
-        fontSize: 18,
-        color: 'gray',
-        marginLeft: 5,
-        marginBottom: 10,
+    BackButtonText: {
+        fontSize: 16,
+        color: '#000000',
+        marginLeft: 8,
+        marginBottom: 0,
         alignSelf: "center",
+        fontWeight: '500',
     },
 
-    SexoAndCivil:{
+    SexoAndCivil: {
         flexDirection: 'row',
         alignSelf: "center",
+        justifyContent: 'space-around',
+        width: '85%',
+        marginVertical: 8,
+        gap: 12,
     },
 
-    Title:{
+    Title: {
         alignSelf: "center",
-        marginLeft: 20,
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: 12,
+        marginBottom: 16,
+        marginTop: 8,
     },
 
-    TitleText:{
-        marginTop: 10,
-        fontSize: 20,
-        color: '#ffffff',
+    TitleText: {
+        fontSize: 24,
+        color: '#000000',
+        fontWeight: 'bold',
+        letterSpacing: 0.8,
     },
 
-    Header:{
-        borderBottomWidth: 0.6,
-        borderBottomColor: '#c1c1c1',
-        paddingBottom: 0,
-        marginBottom: 7,
+    Header: {
+        borderBottomWidth: 1,
+        borderBottomColor: '#e0e0e0',
+        paddingBottom: 12,
+        marginBottom: 16,
         width: '90%',
         flexDirection: 'row',
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'transparent',
     },
 
-    pickDate:{
-        backgroundColor: '#fff',
-        padding: 10,
-        width: '90%',
-        borderRadius: 5,
-        alignItems: "center",    
-        borderColor: '#000',
-        borderWidth: 0.5,
+    pickDate: {
+        backgroundColor: '#ffffff',
+        paddingHorizontal: 14,
+        width: '85%',
+        borderRadius: 12,
+        alignItems: "center",
+        borderColor: '#e0e0e0',
+        borderWidth: 1,
         justifyContent: "center",
-        marginHorizontal: 5,
         alignSelf: "center",
         flexDirection: 'row',
-        height: 45,
-        marginBottom: 5,
-      },
-
-      date:{
-
-        fontSize: 15,
-        color: '#000',
-        alignSelf: "center",
-      },
-
-      logo:{
-        width: '100%',
-        height: 130,
-        alignSelf: "center",
-        marginTop: 20,
+        height: 50,
+        marginBottom: 12,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 2,
     },
-})
+
+    date: {
+        fontSize: 15,
+        color: '#000000',
+        alignSelf: "center",
+        fontWeight: '500',
+    },
+
+    logo: {
+        width: '80%',
+        height: 110,
+        alignSelf: "center",
+        marginTop: 24,
+        marginBottom: 8,
+        resizeMode: 'contain',
+    },
+});
