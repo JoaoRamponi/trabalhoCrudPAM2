@@ -30,7 +30,7 @@ const Cadastro = () => {
 }
 
 async function buscardados(){      
-    const res = await  api.get('appBD/buscarId.php?id=' + id);
+    const res = await api.get('buscarId.php?id=' + id);
  
     setNome(res.data.nome);
     setIdade(res.data.idade);
@@ -67,7 +67,7 @@ async function editar() {
              curso: curso,       
          }
 
-         const res = await api.post('MOBILEAMS/appBD/editar.php', obj);
+         const res = await api.post('editar.php', obj);
 
          if (res.data.sucesso === false) {
              showMessage({
@@ -125,7 +125,7 @@ async function editar() {
                 curso:curso  
             }
 
-            const res = await api.post('MOBILEAMS/appBD/salvar.php', obj);
+            const res = await api.post('salvar.php', obj);
 
             if (res.data.sucesso === false) {
                 showMessage({
@@ -156,22 +156,15 @@ async function editar() {
     
 
     return (
-        <View style={{ flex: 1, marginTop: 0, backgroundColor: '#0f4571', }}>
+        <View style={{ flex: 1, marginTop: 0, backgroundColor: '#ffffff', }}>
             <View style={styles.Header}>
-                 <Image style={styles.logo} source={require('../../../assets/logo2.png')} />         
-          <TouchableOpacity
-              onPress={ () =>  navigation.navigate("Home")}
-              
-          >
-           <Ionicons style={{marginLeft:5, marginRight:5}} name="caret-back-outline" size={35} color="#FFF"></Ionicons>
-          </TouchableOpacity>
-                           
+                 <Image style={styles.logo} source={require('../../../assets/LogoTrabCrud.jpg')} />                           
             </View>
 
             <View style={styles.Title}>
 
-                     <Ionicons name="airplane-outline" size={35} color="#ffffff" />
-                        <Text style={styles.TitleText}>Turismo</Text>
+                     <Ionicons name="color-wand-outline" size={35} color="#000000" onPress={ () =>  navigation.navigate("Home")}/>
+                        <Text style={styles.TitleText}>Cadastro para emprego</Text>
                     </View>
 
             <ScrollView>   
@@ -224,7 +217,7 @@ async function editar() {
                onPress={salvarOuEditar}
             >
 
-               <Ionicons name="footsteps-outline" size={35} color="#FFF" />
+               <Ionicons name="document-lock-outline" size={35} color="#FFF" />
     
                <Text style={styles.ButtonText}>
                   {id ? "Alterar" : "Salvar"}
